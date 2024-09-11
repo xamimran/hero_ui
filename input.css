@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GLOBAL STYLES FOR BODY */
+body {
+  font-family: LufgaRegular;
+  font-size: 16px;
+}
+
+/* FONT FACE DEFINITIONS FOR DIFFERENT WEIGHTS */
+@font-face {
+  font-family: LufgaBlack;
+  src: url("./assets/fonts/LufgaBlack.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: LufgaBold;
+  src: url("./assets/fonts/LufgaBold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: LufgaSemiBold;
+  src: url("./assets/fonts/LufgaSemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: LufgaMedium;
+  src: url("./assets/fonts/LufgaMedium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: LufgaRegular;
+  src: url("./assets/fonts/LufgaRegular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: LufgaLight;
+  src: url("./assets/fonts/LufgaLight.ttf");
+  font-weight: 300;
+}
+
+/* COMMON TAG STYLES */
+.common-tag {
+  line-height: 100%;
+  height: 38px;
+  align-items: center;
+  background-color: #1d5991;
+  color: white;
+  padding: 9px 20px;
+  border-radius: 110px;
+  font-size: 14px;
+  font-family: LufgaMedium;
+  display: flex;
+  width: fit-content;
+  margin: auto;
+}
+
+/* CUSTOM CONTAINER STYLES */
+.custom_container {
+  max-width: 1304px !important;
+  margin: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* HIDE SCROLLBAR FOR SPECIFIC ELEMENTS */
+.scroll_hide::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* FLOATING ANIMATION FOR ELEMENTS WITH ID SCROLL */
+@keyframes floatUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+#scroll {
+  animation: floatUpDown 2s ease-in-out infinite;
+}
+
+/* STYLING FOR WEBKIT SCROLLBAR */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0b359;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* LOGO SLIDER ANIMATIONS */
+.logo-slider {
+  animation-name: textSCroll;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: -40s;
+}
+.logo-slider2 {
+  animation-name: textSCroll;
+  animation-delay: -20s;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* TEXT SCROLLING ANIMATION */
+@keyframes textSCroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* SLICK SLIDER STYLING */
+.slick-slide {
+  margin: 0 8px;
+}
+.slick-list {
+  margin: 0 -8px;
+}
+.slick-dots {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px !important;
+  bottom: -50px !important;
+}
+.slick-dots li button,
+.slick-dots li {
+  align-items: center !important;
+  justify-content: center !important;
+  display: flex !important;
+  min-height: 10px !important;
+  min-width: 10px !important;
+  height: 10px !important;
+  width: 10px !important;
+  border-radius: 50% !important;
+  background: #c8c8c8 !important;
+  margin: 0 !important;
+}
+.slick-dots .slick-active button {
+  background: #000 !important;
+}
+.slick-dots button::before {
+  display: none !important;
+}
+
+/* TABS STYLING FOR ACTIVE AND INACTIVE STATES */
+.tab .active-img {
+  display: none;
+}
+.tab .inactive-img {
+  display: block;
+}
+.active-tab .active-img {
+  display: block !important;
+}
+.active-tab .inactive-img {
+  display: none;
+}
+.tab:hover .active-img {
+  display: block;
+}
+.tab:hover .inactive-img {
+  display: none;
+}
+.active-tab {
+  border-color: #1baaae !important;
+  color: #1baaae !important;
+  background-color: #1baaae1a !important;
+}
+/* ACCORDION ITEM ACTIVE STYLING */
+.accordion-item.active {
+  background-color: #1baaae;
+  color: white;
+}
+
+/* ACCORDION CONTENT OPEN/CLOSED STATES */
+.accordion-content.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 5px;
+}
+.accordion-content.closed {
+  grid-template-rows: 0fr;
+}
+
+/* FAQ ICON CHANGES ON STATE TOGGLES */
+.faq-icon-changed .minus-icon {
+  display: block !important;
+}
+.faq-icon-changed .plus-icon {
+  display: none;
+}
+
+/* RESPONSIVE STYLING FOR CUSTOM CONTAINER AND SLICK SLIDE */
+@media (max-width: 1279.98px) {
+  .custom_container {
+    max-width: 1024px !important;
+  }
+}
+@media (max-width: 1023.98px) {
+  .custom_container {
+    max-width: 768px !important;
+  }
+  .slick-slide {
+    margin: 0 6px;
+  }
+}
+@media (max-width: 767.98px) {
+  .custom_container {
+    max-width: 640px !important;
+  }
+}

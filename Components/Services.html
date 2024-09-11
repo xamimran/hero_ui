@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../output.css" />
+  <link
+    rel="shortcut icon"
+    href="../assets/images/svg/solo-tick.svg"
+    type="image/x-icon"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <title>Buddy Host</title>
+</head>
+  <body>
+    <section
+class="relative after:content-[''] after:w-full after:h-[60%] after:bg-lightBlue after:left-0 after:absolute after:top-[-1px] after:z-[-1] pb-12 lg:pb-20 xl:pb-[100px] pt-12"
+>
+<div class="custom_container">
+  <span class="common-tag">Categories</span>
+  <h3
+    class="text-3xl sm:text-4xl lg:text-[44px] text-black text-center mt-2.5 mb-2 font-LufgaBold leading-[100%]"
+  >
+    Our Services
+  </h3>
+  <p
+    class="max-w-[522px] mx-auto text-center text-sm sm:text-base mb-3 sm:mb-6 xl:mb-10"
+  >
+    Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut
+    labore et dolore aliqua. Ut enim ad minim veniam
+  </p>
+  <div
+    class="shadow-card rounded-3xl xl:rounded-[40px] bg-white overflow-hidden"
+    id="tabContainer"
+  >
+    <div class="overflow-x-auto scroll_hide xl:mb-4">
+      <div
+        class="grid grid-cols-6 gap-1 lg:gap-2 xl:gap-3 lg:px-8 xl:px-12 shadow-card min-w-[800px]"
+      >
+        <div
+          onclick="activateTab(this)"
+          data-content="designers"
+          class="active-tab tab hover:bg-primaryLight hover:border-primary cursor-pointer group duration-300 border-b-4 border-PlaceboGray h-[120px] lg:h-[148px] flex flex-col items-center justify-end gap-4 pb-4 lg:px-3 xl:px-5"
+        >
+          <img
+            class="hidden active-img"
+            src="../assets/images/svg/artist-icon-active.svg"
+            alt="icon"
+          />
+          <img
+            class="inactive-img"
+            src="../assets/images/svg/artist-icon.svg"
+            alt="icon"
+          />
+          <h6
+            class="font-LufgaSemiBold text-center group-hover:text-primary duration-300 text-xs lg:text-sm xl:text-base"
+          >
+            Designers & Artists
+          </h6>
+        </div>
+        <div
+          onclick="activateTab(this)"
+          data-content="developers"
+          class="tab hover:bg-primaryLight hover:border-primary cursor-pointer group duration-300 border-b-4 border-PlaceboGray h-[120px] lg:h-[148px] flex flex-col items-center justify-end gap-4 pb-4 lg:px-3 xl:px-5"
+        >
+          <img
+            class="inactive-img"
+            src="../assets/images/svg/developers-icon.svg"
+            alt="icon"
+          />
+          <img
+            class="hidden active-img"
+            src="../assets/images/svg/developers-icon-active.svg"
+            alt="icon"
+          />
+          <h6
+            class="font-LufgaSemiBold text-center group-hover:text-primary duration-300 text-xs lg:text-sm xl:text-base"
+          >
+            Developers
+          </h6>
+        </div>
+        <div
+          onclick="activateTab(this)"
+          data-content="estate"
+          class="tab hover:bg-primaryLight hover:border-primary cursor-pointer group duration-300 border-b-4 border-PlaceboGray h-[120px] lg:h-[148px] flex flex-col items-center justify-end gap-4 pb-4 lg:px-3 xl:px-5"
+        >
+          <img
+            class="inactive-img"
+            src="../assets/images/svg/real-estate-icon.svg"
+            alt="icon"
+          />
+          <img
+            class="hidden active-img"
+            src="../assets/images/svg/real-estate-icon-active.svg"
+            alt="icon"
+          />
+          <h6
+            class="font-LufgaSemiBold text-center group-hover:text-primary duration-300 text-xs lg:text-sm xl:text-base"
+          >
+            Real Estate
+          </h6>
+        </div>
+        <div
+          onclick="activateTab(this)"
+          data-content="recruitment"
+          class="tab hover:bg-primaryLight hover:border-primary cursor-pointer group duration-300 border-b-4 border-PlaceboGray h-[120px] lg:h-[148px] flex flex-col items-center justify-end gap-4 pb-4 lg:px-3 xl:px-5"
+        >
+          <img
+            class="inactive-img"
+            src="../assets/images/svg/recruitment-icon.svg"
+            alt="icon"
+          />
+          <img
+            class="hidden active-img"
+            src="../assets/images/svg/recruitment-icon-active.svg"
+            alt="icon"
+          />
+          <h6
+            class="font-LufgaSemiBold text-center group-hover:text-primary duration-300 text-xs lg:text-sm xl:text-base"
+          >
+            Recruitment
+          </h6>
+        </div>
+        <div
+          onclick="activateTab(this)"
+          data-content="marketing"
+          class="tab hover:bg-primaryLight hover:border-primary cursor-pointer group duration-300 border-b-4 border-PlaceboGray h-[120px] lg:h-[148px] flex flex-col items-center justify-end gap-4 pb-4 lg:px-3 xl:px-5"
+        >
+          <img
+            class="inactive-img"
+            src="../assets/images/svg/sales-icon.svg"
+            alt="icon"
+          />
+          <img
+            class="hidden active-img"
+            src="../assets/images/svg/sales-icon-active.svg"
+            alt="icon"
+          />
+          <h6
+            class="font-LufgaSemiBold text-center group-hover:text-primary duration-300 text-xs lg:text-sm xl:text-base"
+          >
+            Sales & Marketing
+          </h6>
+        </div>
+        <div
+          onclick="activateTab(this)"
+          data-content="hospitality"
+          class="tab hover:bg-primaryLight hover:border-primary cursor-pointer group duration-300 border-b-4 border-PlaceboGray h-[120px] lg:h-[148px] flex flex-col items-center justify-end gap-4 pb-4 lg:px-3 xl:px-5"
+        >
+          <img
+            class="inactive-img"
+            src="../assets/images/svg/hospitality-icon.svg"
+            alt="icon"
+          />
+          <img
+            class="hidden active-img"
+            src="../assets/images/svg/hospitality-icon-active.svg"
+            alt="icon"
+          />
+          <h6
+            class="font-LufgaSemiBold text-center group-hover:text-primary duration-300 text-xs lg:text-sm xl:text-base"
+          >
+            Hospitality
+          </h6>
+        </div>
+      </div>
+    </div>
+    <div
+      class="py-6 px-3 sm:p-8 md:p-4 lg:p-8 xl:p-12 lg:pb-14 xl:pb-[70px] flex gap-8 md:gap-0 flex-col md:flex-row justify-between items-center content-designer tab-content"
+      id="designers"
+    >
+      <div
+        class="w-full sm:max-w-[90%] md:max-w-[48%] xl:pe-1 order-2 md:order-1 text-center md:text-start"
+      >
+        <h3
+          class="text-2xl lg:text-[28px] xl:text-[32px] text-black font-LufgaSemiBold mb-3 xl:mb-5 leading-[117%]"
+        >
+          Easily test & share a variety of marketing materials for your
+          audiences
+        </h3>
+        <p
+          class="text-blackBeauty text-sm xl:text-base mb-3 sm:mb-5 xl:mb-[30px]"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+          id placerat turpis. Quisque consectetur mattis ullamcorper.
+          Integer convallis odio risus, eget elementum velit sodales at.
+          Aliquam eget lectus nisl. Integer eget sodales elit, et placerat
+          felis. Curabitur et tincidunt orci, in sollicitudin urna. Nunc
+          at enim libero.
+        </p>
+        <button
+          class="rounded-full font-LufgaMedium text-white bg-primary px-5 lg:px-7 py-2 lg:py-3 border border-primary duration-300 hover:bg-white hover:text-primary text-sm lg:text-base"
+        >
+          See examples
+        </button>
+      </div>
+      <div
+        class="max-w-[290px] sm:max-w-[350px] lg:max-w-[400px] xl:max-w-[500px] w-full order-1 md:order-2"
+      >
+        <img
+          class="w-full"
+          src="../assets/images/png/our-service-tab-img.png"
+          alt="service-tab-img"
+        />
+      </div>
+    </div>
+    <div
+      class="py-6 px-3 sm:p-8 md:p-4 lg:p-8 xl:p-12 lg:pb-14 xl:pb-[70px] gap-8 md:gap-0 flex-col md:flex-row justify-between items-center content-developer hidden tab-content"
+      id="developers"
+    >
+      <div
+        class="w-full sm:max-w-[90%] md:max-w-[48%] xl:pe-1 order-2 md:order-1 text-center md:text-start"
+      >
+        <h3
+          class="text-2xl lg:text-[28px] xl:text-[32px] text-black font-LufgaSemiBold mb-3 xl:mb-5 leading-[117%]"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Eveniet, impedit!
+        </h3>
+        <p
+          class="text-blackBeauty text-sm xl:text-base mb-3 sm:mb-5 xl:mb-[30px]"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+          id placerat turpis. Quisque consectetur mattis ullamcorper.
+          Integer convallis odio risus, eget elementum velit sodales at.
+          Aliquam eget lectus nisl. Integer eget sodales elit, et placerat
+          felis. Curabitur et tincidunt orci, in sollicitudin urna. Nunc
+          at enim libero.
+        </p>
+        <button
+          class="rounded-full font-LufgaMedium text-white bg-primary px-5 lg:px-7 py-2 lg:py-3 border border-primary duration-300 hover:bg-white hover:text-primary text-sm lg:text-base"
+        >
+          See examples
+        </button>
+      </div>
+      <div
+        class="max-w-[290px] sm:max-w-[350px] lg:max-w-[400px] xl:max-w-[500px] w-full order-1 md:order-2"
+      >
+        <img
+          class="w-full"
+          src="../assets/images/png/our-service-tab-img.png"
+          alt="service-tab-img"
+        />
+      </div>
+    </div>
+    <div
+      class="py-6 px-3 sm:p-8 md:p-4 lg:p-8 xl:p-12 lg:pb-14 xl:pb-[70px] gap-8 md:gap-0 flex-col md:flex-row justify-between items-center content-estate hidden tab-content"
+      id="estate"
+    >
+      <div
+        class="w-full sm:max-w-[90%] md:max-w-[48%] xl:pe-1 order-2 md:order-1 text-center md:text-start"
+      >
+        <h3
+          class="text-2xl lg:text-[28px] xl:text-[32px] text-black font-LufgaSemiBold mb-3 xl:mb-5 leading-[117%]"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Ducimus, minus totam?
+        </h3>
+        <p
+          class="text-blackBeauty text-sm xl:text-base mb-3 sm:mb-5 xl:mb-[30px]"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+          id placerat turpis. Quisque consectetur mattis ullamcorper.
+          Integer convallis odio risus, eget elementum velit sodales at.
+          Aliquam eget lectus nisl. Integer eget sodales elit, et placerat
+          felis. Curabitur et tincidunt orci, in sollicitudin urna. Nunc
+          at enim libero.
+        </p>
+        <button
+          class="rounded-full font-LufgaMedium text-white bg-primary px-5 lg:px-7 py-2 lg:py-3 border border-primary duration-300 hover:bg-white hover:text-primary text-sm lg:text-base"
+        >
+          See examples
+        </button>
+      </div>
+      <div
+        class="max-w-[290px] sm:max-w-[350px] lg:max-w-[400px] xl:max-w-[500px] w-full order-1 md:order-2"
+      >
+        <img
+          class="w-full"
+          src="../assets/images/png/our-service-tab-img.png"
+          alt="service-tab-img"
+        />
+      </div>
+    </div>
+    <div
+      class="py-6 px-3 sm:p-8 md:p-4 lg:p-8 xl:p-12 lg:pb-14 xl:pb-[70px] gap-8 md:gap-0 flex-col md:flex-row justify-between items-center content-recruitment hidden tab-content"
+      id="recruitment"
+    >
+      <div
+        class="w-full sm:max-w-[90%] md:max-w-[48%] xl:pe-1 order-2 md:order-1 text-center md:text-start"
+      >
+        <h3
+          class="text-2xl lg:text-[28px] xl:text-[32px] text-black font-LufgaSemiBold mb-3 xl:mb-5 leading-[117%]"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </h3>
+        <p
+          class="text-blackBeauty text-sm xl:text-base mb-3 sm:mb-5 xl:mb-[30px]"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+          id placerat turpis. Quisque consectetur mattis ullamcorper.
+          Integer convallis odio risus, eget elementum velit sodales at.
+          Aliquam eget lectus nisl. Integer eget sodales elit, et placerat
+          felis. Curabitur et tincidunt orci, in sollicitudin urna. Nunc
+          at enim libero.
+        </p>
+        <button
+          class="rounded-full font-LufgaMedium text-white bg-primary px-5 lg:px-7 py-2 lg:py-3 border border-primary duration-300 hover:bg-white hover:text-primary text-sm lg:text-base"
+        >
+          See examples
+        </button>
+      </div>
+      <div
+        class="max-w-[290px] sm:max-w-[350px] lg:max-w-[400px] xl:max-w-[500px] w-full order-1 md:order-2"
+      >
+        <img
+          class="w-full"
+          src="../assets/images/png/our-service-tab-img.png"
+          alt="service-tab-img"
+        />
+      </div>
+    </div>
+    <div
+      class="py-6 px-3 sm:p-8 md:p-4 lg:p-8 xl:p-12 lg:pb-14 xl:pb-[70px] gap-8 md:gap-0 flex-col md:flex-row justify-between items-center content-marketing hidden tab-content"
+      id="marketing"
+    >
+      <div
+        class="w-full sm:max-w-[90%] md:max-w-[48%] xl:pe-1 order-2 md:order-1 text-center md:text-start"
+      >
+        <h3
+          class="text-2xl lg:text-[28px] xl:text-[32px] text-black font-LufgaSemiBold mb-3 xl:mb-5 leading-[117%]"
+        >
+          Easily test & share a variety of marketing materials for your
+          audiences
+        </h3>
+        <p
+          class="text-blackBeauty text-sm xl:text-base mb-3 sm:mb-5 xl:mb-[30px]"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+          id placerat turpis. Quisque consectetur mattis ullamcorper.
+          Integer convallis odio risus, eget elementum velit sodales at.
+          Aliquam eget lectus nisl. Integer eget sodales elit, et placerat
+          felis. Curabitur et tincidunt orci, in sollicitudin urna. Nunc
+          at enim libero.
+        </p>
+        <button
+          class="rounded-full font-LufgaMedium text-white bg-primary px-5 lg:px-7 py-2 lg:py-3 border border-primary duration-300 hover:bg-white hover:text-primary text-sm lg:text-base"
+        >
+          See examples
+        </button>
+      </div>
+      <div
+        class="max-w-[290px] sm:max-w-[350px] lg:max-w-[400px] xl:max-w-[500px] w-full order-1 md:order-2"
+      >
+        <img
+          class="w-full"
+          src="../assets/images/png/our-service-tab-img.png"
+          alt="service-tab-img"
+        />
+      </div>
+    </div>
+    <div
+      class="py-6 px-3 sm:p-8 md:p-4 lg:p-8 xl:p-12 lg:pb-14 xl:pb-[70px] gap-8 md:gap-0 flex-col md:flex-row justify-between items-center content-hospitality hidden tab-content"
+      id="hospitality"
+    >
+      <div
+        class="w-full sm:max-w-[90%] md:max-w-[48%] xl:pe-1 order-2 md:order-1 text-center md:text-start"
+      >
+        <h3
+          class="text-2xl lg:text-[28px] xl:text-[32px] text-black font-LufgaSemiBold mb-3 xl:mb-5 leading-[117%]"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </h3>
+        <p
+          class="text-blackBeauty text-sm xl:text-base mb-3 sm:mb-5 xl:mb-[30px]"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+          id placerat turpis. Quisque consectetur mattis ullamcorper.
+          Integer convallis odio risus, eget elementum velit sodales at.
+          Aliquam eget lectus nisl. Integer eget sodales elit, et placerat
+          felis. Curabitur et tincidunt orci, in sollicitudin urna. Nunc
+          at enim libero.
+        </p>
+        <button
+          class="rounded-full font-LufgaMedium text-white bg-primary px-5 lg:px-7 py-2 lg:py-3 border border-primary duration-300 hover:bg-white hover:text-primary text-sm lg:text-base"
+        >
+          See examples
+        </button>
+      </div>
+      <div
+        class="max-w-[290px] sm:max-w-[350px] lg:max-w-[400px] xl:max-w-[500px] w-full order-1 md:order-2"
+      >
+        <img
+          class="w-full"
+          src="../assets/images/png/our-service-tab-img.png"
+          alt="service-tab-img"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // ACTIVATE TAB AND UPDATE STYLES
+  function activateTab(tabElement) {
+    // Remove 'active' class from all tabs
+    const tabs = document.querySelectorAll(".tab");
+    tabs.forEach((tab) => {
+      tab.classList.remove("active-tab");
+      tab.classList.add("border-PlaceboGray");
+      tab.querySelector(".active-img").classList.add("hidden");
+      tab.querySelector(".inactive-img").classList.remove("hidden");
+    });
+
+    // Remove 'hidden' class from the corresponding tab content
+    const tabContents = document.querySelectorAll(".tab-content");
+    tabContents.forEach((content) => content.classList.add("hidden"));
+
+    // Add 'active' class to the clicked tab
+    tabElement.classList.add("active-tab");
+    tabElement.classList.remove("border-PlaceboGray");
+    tabElement.querySelector(".active-img").classList.remove("hidden");
+    tabElement.querySelector(".inactive-img").classList.add("hidden");
+
+    // Show the content associated with the clicked tab
+    const contentId = tabElement.getAttribute("data-content");
+    document.getElementById(contentId).classList.remove("hidden");
+    document.getElementById(contentId).classList.add("flex");
+  }
+
+  // Initialize the first tab as active
+  document.addEventListener("DOMContentLoaded", () => {
+    const firstTab = document.querySelector(".tab");
+    if (firstTab) {
+      activateTab(firstTab);
+    }
+  });
+</script>
+</section>
+
+  </body>
+</html>
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../output.css" />
+  <link
+    rel="shortcut icon"
+    href="./assets/images/svg/solo-tick.svg"
+    type="image/x-icon"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <title>Buddy Host</title>
+</head>
+  <body>
+    <section class="py-[50px]">
+      <div class="custom_container">
+        <h1
+          class="text-3xl text-black font-LufgaBold text-center leading-[130%] mb-5 md:mb-[30px]"
+        >
+          The simplest way to host & <br class="hidden sm:block" />
+          share your web project
+        </h1>
+        <div
+          class="shadow-hero max-w-[740px] mx-auto bg-white rounded-[30px] p-3 sm:p-5"
+        >
+          <div
+            class="border-lightGray border rounded-[27.5px] pl-5 pr-1 py-[5px] flex justify-between items-center gap-4 max-w-[580px] mx-auto"
+          >
+            <input
+              class="outline-none bg-transparent w-full paragraph-heading !text-amethystHaze placeholder:!text-amethystHaze text-sm sm:text-base"
+              placeholder="Link - name"
+              type="text"
+            />
+            <div class="relative max-w-[162px] w-full">
+              <div
+                class="h-[45px] bg-secondary flex items-center justify-center gap-2.5 rounded-full text-doctor text-base dropdown-btn cursor-pointer px-6"
+                onclick="toggleDropdown()"
+              >
+                BuddyHost
+                <img src="../assets/images/svg/btn-arw.svg" alt="arw" />
+              </div>
+              <!-- The dropdown content -->
+              <div
+                class="dropdown-content hidden absolute z-10 end-0 bg-secondary w-[150px] rounded-[10px] overflow-hidden top-14"
+                id="dropdownContent"
+              >
+                <a
+                  class="w-full block p-3 duration-300 text-white hover:bg-primary"
+                  href="#"
+                  onclick="selectOption('Option 1')"
+                  >Option 1</a
+                >
+                <a
+                  class="w-full block p-3 duration-300 text-white hover:bg-primary"
+                  href="#"
+                  onclick="selectOption('Option 2')"
+                  >Option 2</a
+                >
+                <a
+                  class="w-full block p-3 duration-300 text-white hover:bg-primary"
+                  href="#"
+                  onclick="selectOption('Option 3')"
+                  >Option 3</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="border-secondary border-dotted border-2 rounded-[25px] bg-lightBlue flex flex-col justify-center items-center h-[300px] mt-6 cursor-pointer"
+          >
+            <img
+              class="max-w-[180px] sm:max-w-none mx-auto"
+              src="../assets/images/svg/html-group.svg"
+              alt="html group"
+            />
+            <p class="px-3 text-center sm:text-base text-black pt-4">
+              Drag and drop zip or single file here
+            </p>
+          </div>
+        </div>
+      </div>
+      <script>
+        // TOGGLE DROPDOWN CONTENT VISIBILITY
+        function toggleDropdown() {
+          var dropdownContent = document.getElementById("dropdownContent");
+          dropdownContent.style.display =
+            dropdownContent.style.display === "block" ? "none" : "block";
+        }
+        // SET SELECTED OPTION IN DROPDOWN BUTTON
+        function selectOption(option) {
+          var dropdownButton = document.querySelector(".dropdown-btn");
+          dropdownButton.textContent = option;
+          toggleDropdown(); // CLOSE THE DROPDOWN AFTER SELECTING AN OPTION
+        }
+        // CLOSE THE DROPDOWN IF USER CLICKS OUTSIDE OF IT
+        window.onclick = function (event) {
+          if (!event.target.matches(".dropdown-btn")) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+              }
+            }
+          }
+        };
+      </script>
+    </section>
+  
+  </body>
+</html>
+

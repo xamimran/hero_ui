@@ -1,0 +1,62 @@
+<aside
+id="sidebar"
+class="sidebar md:hidden max-w-[400px] w-full h-screen fixed top-0 bg-white flex flex-col duration-300 p-5 -left-full z-[100]"
+>
+<!-- Sidebar Header -->
+<div class="flex justify-between items-center">
+  <div class="max-w-[120px]">
+    <a href="/">
+      <img
+        class="w-full"
+        src="./assets/images/svg/header-logo.svg"
+        alt="header-logo"
+      />
+    </a>
+  </div>
+  <div onclick="handleSidebar()" class="cursor-pointer">&#10005;</div>
+</div>
+
+<!-- Sidebar Links -->
+<div class="flex py-10 grow">
+  <div class="flex flex-col gap-5">
+    <a
+      onclick="handleSidebar()"
+      class="text-sm font-LufgaMedium text-black"
+      href="#"
+      >Home</a
+    >
+    <a
+      onclick="handleSidebar()"
+      class="text-sm font-LufgaMedium text-black"
+      href="#"
+      >Blog</a
+    >
+    <a
+      onclick="handleSidebar()"
+      class="text-sm font-LufgaMedium text-black"
+      href="#"
+      >Help</a
+    >
+    <a
+      onclick="handleSidebar()"
+      class="text-sm font-LufgaMedium text-black"
+      href="#pricing"
+      >Pricing</a
+    >
+  </div>
+</div>
+
+<!-- Sidebar Buttons -->
+<div class="flex items-center gap-3 sm:gap-4">
+  <button
+    class="px-6 py-3 w-full rounded-[28px] bg-primary text-white hover:text-primary-0 text-sm font-LufgaBold flex justify-center items-center hover:bg-transparent border border-primary hover:text-primary duration-300 gap-3"
+  >
+    Login
+  </button>
+  <button
+    class="w-full py-3 rounded-[28px] hover:bg-black hover:text-white border-black border text-sm font-LufgaBold text-black flex justify-center items-center duration-300 px-3"
+  >
+    Sign up for free
+  </button>
+</div>
+</aside>

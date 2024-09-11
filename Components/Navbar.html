@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/svg/solo-tick.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <title>Buddy Host</title>
+  </head>
+  <body>
+<header
+class="custom_container py-4 flex justify-between items-center gap-4"
+>
+<!-- Logo -->
+<div class="max-w-[120px]">
+  <a href="/">
+    <img
+      class="w-full"
+      src="../assets/images/svg/header-logo.svg"
+      alt="header-logo"
+    />
+  </a>
+</div>
+
+<!-- Navigation Links (visible on medium and larger screens) -->
+<div class="hidden md:flex justify-between items-center">
+  <a
+    class="text-sm font-LufgaMedium text-black hover:text-white px-5 lg:px-9 py-3 rounded-[28px] hover:bg-primary duration-300"
+    href="#"
+    >Home</a
+  >
+  <a
+    class="text-sm font-LufgaMedium text-black hover:text-white px-5 lg:px-9 py-3 rounded-[28px] hover:bg-primary duration-300"
+    href=""
+    >Blog</a
+  >
+  <a
+    class="text-sm font-LufgaMedium text-black hover:text-white px-5 lg:px-9 py-3 rounded-[28px] hover:bg-primary duration-300"
+    href=""
+    >Help</a
+  >
+  <a
+    class="text-sm font-LufgaMedium text-black hover:text-white px-5 lg:px-9 py-3 rounded-[28px] hover:bg-primary duration-300"
+    href="#pricing"
+    >Pricing</a
+  >
+</div>
+
+<!-- Buttons (visible on medium and larger screens) -->
+<div class="hidden md:flex items-center gap-4">
+  <button
+    class="px-6 py-3 rounded-[28px] bg-primary text-white hover:text-primary-0 text-sm font-LufgaBold flex justify-center items-center hover:bg-transparent border border-primary hover:text-primary duration-300 gap-3"
+  >
+    Login
+  </button>
+  <button
+    class="px-6 py-3 rounded-[28px] hover:bg-black hover:text-white border-black border text-sm font-LufgaBold text-black flex justify-center items-center duration-300"
+  >
+    Sign up for free
+  </button>
+</div>
+
+<!-- Mobile Menu Icon -->
+<button onclick="handleSidebar()" class="block md:hidden">&#9776;</button>
+<script>
+  // TOGGLE SIDEBAR VISIBILITY
+  function handleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.querySelector(".sidebar-overlay");
+    sidebar.classList.toggle("-left-full");
+    sidebar.classList.toggle("left-0");
+    overlay.classList.toggle("hidden");
+  }
+</script>
+</header>
+  </body>
+</html>
